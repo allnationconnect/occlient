@@ -489,6 +489,7 @@ struct openconnect_info {
 
 	char *hostname; /* This is the original hostname (or IP address)
 			 * we were asked to connect to */
+    char *resolveIp; /* IP, Use IP when connecting to hostname */
 
 	char *unique_hostname; /* This is the IP address of the actual host
 				* that we connected to; the result of the

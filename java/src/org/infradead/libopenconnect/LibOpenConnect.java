@@ -113,6 +113,7 @@ public abstract class LibOpenConnect {
 	/* control operations */
 
 	public synchronized native int parseURL(String url);
+	public synchronized native int setResolveIP(String ip);
 	public synchronized native int obtainCookie();
 	public synchronized native void clearCookie();
 	public synchronized native void resetSSL();

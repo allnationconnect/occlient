@@ -1373,6 +1373,17 @@ JNIEXPORT jint JNICALL Java_org_infradead_libopenconnect_LibOpenConnect_parseURL
 	return ret;
 }
 
+JNIEXPORT jint JNICALL Java_org_infradead_libopenconnect_LibOpenConnect_setResolveIP(
+	JNIEnv *jenv, jobject jobj, jstring jarg)
+{
+	int ret;
+	SET_STRING_START()
+    free(ctx->vpninfo->resolveIp);
+    ctx->vpninfo->resolveIp = arg;
+	SET_STRING_END();
+	return 0;
+}
+
 JNIEXPORT jint JNICALL Java_org_infradead_libopenconnect_LibOpenConnect_setProxyAuth(
 	JNIEnv *jenv, jobject jobj, jstring jarg)
 {

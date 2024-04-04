@@ -397,6 +397,8 @@ int connect_https_socket(struct openconnect_info *vpninfo)
 
 		if (vpninfo->getaddrinfo_override)
 			err = vpninfo->getaddrinfo_override(vpninfo->cbdata, hostname, port, &hints, &result);
+        else if (vpninfo->resolveIp)
+            err = getaddrinfo(vpninfo->resolveIp, port, &hints, &result);
 		else
 			err = getaddrinfo(hostname, port, &hints, &result);
 
