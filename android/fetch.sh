@@ -18,25 +18,25 @@
 set -e
 
 libxml2_MIRROR_0=ftp://xmlsoft.org/libxml2
-libxml2_MIRROR_1=http://gd.tuwien.ac.at/pub/libxml
-libxml2_MIRROR_2=http://distfiles.macports.org/libxml2
+libxml2_MIRROR_1=https://gd.tuwien.ac.at/pub/libxml
+libxml2_MIRROR_2=https://distfiles.macports.org/libxml2
 
-gmp_MIRROR_0=http://ftp.gnu.org/gnu/gmp
+gmp_MIRROR_0=https://ftp.gnu.org/gnu/gmp
 gmp_MIRROR_1=https://gmplib.org/download/gmp
-gmp_MIRROR_2=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/gmp
+gmp_MIRROR_2=https://www.mirrorservice.org/sites/ftp.gnu.org/gnu/gmp
 
-nettle_MIRROR_0=http://www.lysator.liu.se/~nisse/archive
-nettle_MIRROR_1=http://ftp.gnu.org/gnu/nettle
-nettle_MIRROR_2=http://gd.tuwien.ac.at/gnu/gnusrc/nettle
+nettle_MIRROR_0=https://www.lysator.liu.se/~nisse/archive
+nettle_MIRROR_1=https://ftp.gnu.org/gnu/nettle
+nettle_MIRROR_2=https://gd.tuwien.ac.at/gnu/gnusrc/nettle
 
 gnutls_MIRROR_0=https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6
-gnutls_MIRROR_1=http://ftp.heanet.ie/mirrors/ftp.gnupg.org/gcrypt/gnutls/v3.6
-gnutls_MIRROR_2=http://gd.tuwien.ac.at/pub/gnupg/gnutls/v3.6
+gnutls_MIRROR_1=https://ftp.heanet.ie/mirrors/ftp.gnupg.org/gcrypt/gnutls/v3.6
+gnutls_MIRROR_2=https://gd.tuwien.ac.at/pub/gnupg/gnutls/v3.6
 
-stoken_MIRROR_0=http://sourceforge.net/projects/stoken/files
+stoken_MIRROR_0=https://sourceforge.net/projects/stoken/files
 stoken_SUFFIX_0=/download
 
-oath_toolkit_MIRROR_0=http://download.savannah.gnu.org/releases/oath-toolkit
+oath_toolkit_MIRROR_0=https://download.savannah.gnu.org/releases/oath-toolkit
 oath_toolkit_MIRROR_1=https://download-mirror.savannah.gnu.org/releases/oath-toolkit
 
 lz4_MIRROR_0=https://github.com/lz4/lz4/archive
@@ -68,7 +68,7 @@ function make_url
 		# typical format: https://github.com/USER/PKG/archive/TAG.tar.gz
 		echo "${mirror_base}/${tarball#*-}"
 	else
-		# typical format: http://.../PKG-TAG.tar.gz
+		# typical format: https://.../PKG-TAG.tar.gz
 		echo "${mirror_base}/${tarball}${mirror_suffix}"
 	fi
 
