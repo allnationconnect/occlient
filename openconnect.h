@@ -576,6 +576,7 @@ const char *openconnect_get_hostname(struct openconnect_info *);
 const char *openconnect_get_dnsname(struct openconnect_info *);
 
 int openconnect_set_hostname(struct openconnect_info *, const char *);
+int openconnect_set_resolve_ip(struct openconnect_info *, const char *);
 char *openconnect_get_urlpath(struct openconnect_info *);
 int openconnect_set_urlpath(struct openconnect_info *, const char *);
 int openconnect_set_localname(struct openconnect_info *, const char *);

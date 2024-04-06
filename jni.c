@@ -1378,9 +1378,7 @@ JNIEXPORT jint JNICALL Java_org_infradead_libopenconnect_LibOpenConnect_setResol
 {
 	int ret;
 	SET_STRING_START()
-    struct openconnect_info *vpninfo;
-    vpninfo = ctx->vpninfo;
-	STRDUP(vpninfo->resolveIp, arg);
+    ret = openconnect_set_resolve_ip(ctx->vpninfo, arg);
 	SET_STRING_END();
 	return 0;
 }

@@ -853,6 +853,15 @@ int openconnect_set_hostname(struct openconnect_info *vpninfo,
 	return 0;
 }
 
+int openconnect_set_resolve_ip(struct openconnect_info *vpninfo,
+			     const char *ip)
+{
+	UTF8CHECK(ip);
+
+	STRDUP(vpninfo->resolveIp, ip);
+	return 0;
+}
+
 char *openconnect_get_urlpath(struct openconnect_info *vpninfo)
 {
 	return vpninfo->urlpath;
